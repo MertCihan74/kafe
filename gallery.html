@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Liman Balık Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Fallback CSS */
+        body { font-family: 'Roboto', Arial, sans-serif; margin: 0; padding: 70px 0 0 0; background: #f8fafc; color: #1e293b; }
+        .navbar { background: #1e3a8a; color: white; padding: 1rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 1.5rem; font-weight: 700; }
+        .nav-menu { display: flex; gap: 30px; }
+        .nav-link { color: white; text-decoration: none; font-weight: 500; transition: all 0.3s; }
+        .nav-link:hover { color: #06b6d4; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        /* Hero styles now in main CSS file */
+        .hero-title { font-size: 3rem; margin-bottom: 1rem; }
+        .gallery-section { padding: 60px 0; }
+        .gallery-tabs { display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; }
+        .gallery-tab { padding: 12px 24px; background: #1e3a8a; color: white; text-decoration: none; border-radius: 8px; transition: all 0.3s; }
+        .gallery-tab:hover, .gallery-tab.active { background: #1e40af; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .gallery-item { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: relative; }
+        .gallery-item img { width: 100%; height: 200px; object-fit: cover; }
+        .gallery-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.8); color: white; padding: 20px; transform: translateY(100%); transition: transform 0.3s; }
+        .gallery-item:hover .gallery-overlay { transform: translateY(0); }
+        .footer { background: #1e293b; color: white; padding: 40px 0 20px; text-align: center; margin-top: 60px; }
+    </style>
+</head>
+<body style="padding-top: 70px;">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-fish"></i>
+                <span>Liman Balık</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="menu.html" class="nav-link">Menü</a>
+                <a href="reservation.html" class="nav-link">Rezervasyon</a>
+                <a href="gallery.html" class="nav-link active">Galeri</a>
+                <a href="about.html" class="nav-link">Hakkımızda</a>
+                <a href="contact.html" class="nav-link">İletişim</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <i class="fas fa-images"></i>
+                Fotoğraf Galerisi
+            </h1>
+            <p class="hero-subtitle">Lezzetlerimizi ve mekanımızı keşfedin</p>
+            <p class="hero-description">
+                Yemeklerimizin, atmosferimizin ve Karadeniz manzaralarımızın fotoğraflarını inceleyin.
+            </p>
+            <div class="hero-buttons">
+                <a href="#gallery-section" class="btn btn-primary">
+                    <i class="fas fa-images"></i>
+                    Galeriyi İncele
+                </a>
+                <a href="reservation.html" class="btn btn-secondary">
+                    <i class="fas fa-calendar-check"></i>
+                    Rezervasyon Yap
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-tabs">
+                <button class="gallery-tab active" data-category="food">
+                    <i class="fas fa-utensils"></i>
+                    Yemekler
+                </button>
+                <button class="gallery-tab" data-category="interior">
+                    <i class="fas fa-home"></i>
+                    Mekan İçi
+                </button>
+                <button class="gallery-tab" data-category="exterior">
+                    <i class="fas fa-water"></i>
+                    Manzara
+                </button>
+                <button class="gallery-tab" data-category="events">
+                    <i class="fas fa-birthday-cake"></i>
+                    Özel Etkinlikler
+                </button>
+            </div>
+
+            <!-- Food Gallery -->
+            <div id="food-gallery" class="gallery-content active">
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="food">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400" alt="Levrek Izgara">
+                        <div class="gallery-overlay">
+                            <h3>Levrek Izgara</h3>
+                            <p>Taze levrek balığı, zeytinyağı ve baharatlarla</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="food">
+                        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400" alt="Çupra Buğulama">
+                        <div class="gallery-overlay">
+                            <h3>Çupra Buğulama</h3>
+                            <p>Geleneksel yöntemlerle buğulanan çupra balığı</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="food">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400" alt="Karides Güveç">
+                        <div class="gallery-overlay">
+                            <h3>Karides Güveç</h3>
+                            <p>Taze karides, sebzeler ve özel sos</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="food">
+                        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400" alt="Midye Tava">
+                        <div class="gallery-overlay">
+                            <h3>Midye Tava</h3>
+                            <p>Taze midyeler, sarımsak ve maydanoz ile</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="food">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400" alt="Meze Tabağı">
+                        <div class="gallery-overlay">
+                            <h3>Meze Tabağı</h3>
+                            <p>Çeşitli mezeler ile zengin başlangıç</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="food">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400" alt="Karides Sote">
+                        <div class="gallery-overlay">
+                            <h3>Karides Sote</h3>
+                            <p>Taze karidesler, sarımsak ve baharatlar</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="food">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400" alt="Balık Plakisi">
+                        <div class="gallery-overlay">
+                            <h3>Balık Plakisi</h3>
+                            <p>Fırında pişirilmiş balık ve sebzeler</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="food">
+                        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400" alt="Lüfer Izgara">
+                        <div class="gallery-overlay">
+                            <h3>Lüfer Izgara</h3>
+                            <p>Taze lüfer balığı limon ile</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interior Gallery -->
+            <div id="interior-gallery" class="gallery-content">
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" alt="Ana Salon">
+                        <div class="gallery-overlay">
+                            <h3>Ana Salon</h3>
+                            <p>Geniş ve ferah ana yemek salonumuz</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Sahil Terası">
+                        <div class="gallery-overlay">
+                            <h3>Sahil Terası</h3>
+                            <p>Deniz manzaralı açık teras alanı</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400" alt="Özel Masa">
+                        <div class="gallery-overlay">
+                            <h3>Özel Masa</h3>
+                            <p>Romantik akşam yemekleri için özel masa</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400" alt="Bar Alanı">
+                        <div class="gallery-overlay">
+                            <h3>Bar Alanı</h3>
+                            <p>İçecekler ve sohbet için bar alanı</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400" alt="VIP Bölüm">
+                        <div class="gallery-overlay">
+                            <h3>VIP Bölüm</h3>
+                            <p>Özel davetler için ayrılmış VIP bölüm</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="interior">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" alt="Mutfak Görünümü">
+                        <div class="gallery-overlay">
+                            <h3>Mutfak Görünümü</h3>
+                            <p>Açık mutfak konseptimiz</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exterior Gallery -->
+            <div id="exterior-gallery" class="gallery-content">
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="exterior">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Sahil Manzarası">
+                        <div class="gallery-overlay">
+                            <h3>Sahil Manzarası</h3>
+                            <p>Karadeniz'in muhteşem manzarası</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="exterior">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Gün Batımı">
+                        <div class="gallery-overlay">
+                            <h3>Gün Batımı</h3>
+                            <p>Eşsiz Karadeniz gün batımı</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="exterior">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Amasra Kalesi">
+                        <div class="gallery-overlay">
+                            <h3>Amasra Kalesi</h3>
+                            <p>Tarihi Amasra Kalesi manzarası</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="exterior">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Deniz">
+                        <div class="gallery-overlay">
+                            <h3>Açık Deniz</h3>
+                            <p>Berrak Karadeniz suları</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="exterior">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Sahil Yolu">
+                        <div class="gallery-overlay">
+                            <h3>Sahil Yolu</h3>
+                            <p>Restorana ulaşım yolu</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="exterior">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Manzara">
+                        <div class="gallery-overlay">
+                            <h3>Genel Manzara</h3>
+                            <p>Restoranımızın genel görünümü</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events Gallery -->
+            <div id="events-gallery" class="gallery-content">
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="events">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400" alt="Doğum Günü">
+                        <div class="gallery-overlay">
+                            <h3>Doğum Günü Kutlaması</h3>
+                            <p>Özel doğum günü etkinliği</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" alt="Nişan">
+                        <div class="gallery-overlay">
+                            <h3>Nişan Etkinliği</h3>
+                            <p>Geleneksel nişan töreni</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400" alt="Yılbaşı">
+                        <div class="gallery-overlay">
+                            <h3>Yılbaşı Etkinliği</h3>
+                            <p>Yılbaşı özel menüsü ile</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" alt="Grup Etkinliği">
+                        <div class="gallery-overlay">
+                            <h3>Grup Etkinliği</h3>
+                            <p>Şirket toplantısı veya grup yemeği</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400" alt="Romantik Akşam">
+                        <div class="gallery-overlay">
+                            <h3>Romantik Akşam</h3>
+                            <p>Sevgililer günü özel atmosferi</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" alt="Aile Toplantısı">
+                        <div class="gallery-overlay">
+                            <h3>Aile Toplantısı</h3>
+                            <p>Büyük aile yemekleri için uygun ortam</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Viewing -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+            <div class="modal-navigation">
+                <button id="prevImage" class="modal-nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="nextImage" class="modal-nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-fish"></i>
+                        <span>Liman Balık</span>
+                    </div>
+                    <p>Karadeniz'in en taze lezzetleri ile sizleri ağırlamaktan mutluluk duyarız.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="menu.html">Menü</a></li>
+                        <li><a href="reservation.html">Rezervasyon</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 0378 XXX XX XX</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sahil Yolu No:12, Amasra</p>
+                        <p><i class="fas fa-clock"></i> 11:00 - 23:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Liman Balık Restaurant. Tüm hakları saklıdır.</p>
+                <p>Demo Site - Mert Cihan Bayır</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

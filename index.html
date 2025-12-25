@@ -1,1 +1,351 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liman Balık Restaurant - Karadeniz'in En Taze Lezzetleri</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body style="padding-top: 70px;">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-fish"></i>
+                <span>Liman Balık</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Ana Sayfa</a>
+                <a href="menu.html" class="nav-link">Menü</a>
+                <a href="reservation.html" class="nav-link">Rezervasyon</a>
+                <a href="gallery.html" class="nav-link">Galeri</a>
+                <a href="about.html" class="nav-link">Hakkımızda</a>
+                <a href="contact.html" class="nav-link">İletişim</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <i class="fas fa-fish"></i>
+                Liman Balık Restaurant
+            </h1>
+            <p class="hero-subtitle">Karadeniz'in En Taze Lezzetleri</p>
+            <p class="hero-description">
+                Sahil manzaralı eşsiz atmosferimizde, taze Karadeniz balıkları ve geleneksel Türk mutfağı lezzetlerini keşfedin.
+            </p>
+            <div class="hero-buttons">
+                <a href="reservation.html" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i>
+                    Rezervasyon Yap
+                </a>
+                <a href="menu.html" class="btn btn-secondary">
+                    <i class="fas fa-utensils"></i>
+                    Menüyü İncele
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Featured Dishes -->
+    <section class="featured-dishes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Öne Çıkan Lezzetler</h2>
+                <p>Şefimizin özel seçimi, taze malzemelerle hazırlanan imza lezzetlerimiz</p>
+            </div>
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400" alt="Levrek Izgara">
+                        <div class="dish-price">250₺</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3>Levrek Izgara</h3>
+                        <p>Taze levrek balığı, zeytinyağı ve baharatlarla ızgara</p>
+                        <div class="dish-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400" alt="Çupra Buğulama">
+                        <div class="dish-price">280₺</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3>Çupra Buğulama</h3>
+                        <p>Geleneksel yöntemlerle buğulanan çupra balığı</p>
+                        <div class="dish-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400" alt="Karides Güveç">
+                        <div class="dish-price">320₺</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3>Karides Güveç</h3>
+                        <p>Taze karides, sebzeler ve özel sos ile güveçte pişirilmiş</p>
+                        <div class="dish-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.7)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400" alt="Meze Tabağı">
+                        <div class="dish-price">120₺</div>
+                    </div>
+                    <div class="dish-content">
+                        <h3>Meze Tabağı</h3>
+                        <p>Çeşitli mezeler ile hazırlanan zengin başlangıç tabağı</p>
+                        <div class="dish-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Slider -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mekanımız</h2>
+                <p>Sahil manzaralı eşsiz atmosferimizde keyifli vakitler geçirin</p>
+            </div>
+            <div class="gallery-slider">
+                <div class="slider-container">
+                    <div class="slide active">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Restaurant Interior">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800" alt="Sea View">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=800" alt="Restaurant Terrace">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800" alt="Dining Area">
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="slider-btn prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Müşteri Yorumları</h2>
+                <p>Google değerlendirmelerimiz</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="review-info">
+                            <h4>Ayşe K.</h4>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        "Muhteşem bir deneyim! Levrek ızgara mükemmeldi ve manzara eşsiz. Kesinlikle tavsiye ederim!"
+                    </p>
+                    <span class="review-date">2 hafta önce</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="review-info">
+                            <h4>Mehmet S.</h4>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        "Karadeniz balıkları burada gerçekten taze. Servis hızlı ve personel çok ilgili. Tekrar geleceğim."
+                    </p>
+                    <span class="review-date">1 ay önce</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="review-info">
+                            <h4>Zeynep T.</h4>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        "Romantik akşam yemeği için mükemmel yer. Çupra buğulama harikaydı. Atmosfer çok hoş."
+                    </p>
+                    <span class="review-date">3 hafta önce</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Map -->
+    <section class="location-section">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-info">
+                    <h2>Bizi Bulun</h2>
+                    <div class="location-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adres</h4>
+                                <p>Sahil Yolu No:12, Amasra/Bartın</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p>0378 XXX XX XX</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Her gün: 11:00 - 23:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-directions"></i>
+                        Yol Tarifi Al
+                    </a>
+                </div>
+                <div class="location-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Google Maps Entegrasyonu</p>
+                        <small>Amasra, Bartın</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-fish"></i>
+                        <span>Liman Balık</span>
+                    </div>
+                    <p>Karadeniz'in en taze lezzetleri ile sizleri ağırlamaktan mutluluk duyarız.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul>
+                        <li><a href="menu.html">Menü</a></li>
+                        <li><a href="reservation.html">Rezervasyon</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 0378 XXX XX XX</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sahil Yolu No:12, Amasra</p>
+                        <p><i class="fas fa-clock"></i> 11:00 - 23:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Liman Balık Restaurant. Tüm hakları saklıdır.</p>
+                <p>Demo Site - Mert Cihan Bayır</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

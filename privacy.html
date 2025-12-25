@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Politikası - Liman Balık Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .privacy-hero {
+            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(6, 182, 212, 0.6)),
+                        url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600') center/cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .privacy-content h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .privacy-content .last-updated {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+
+        .privacy-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .privacy-section h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .privacy-section h3 {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        .privacy-section p {
+            line-height: 1.7;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .privacy-section ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 40px 20px;
+            }
+
+            .privacy-content h1 {
+                font-size: 2rem;
+            }
+
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-fish"></i>
+                <span>Liman Balık</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="menu.html" class="nav-link">Menü</a>
+                <a href="reservation.html" class="nav-link">Rezervasyon</a>
+                <a href="gallery.html" class="nav-link">Galeri</a>
+                <a href="about.html" class="nav-link">Hakkımızda</a>
+                <a href="contact.html" class="nav-link">İletişim</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Privacy Hero -->
+    <section class="privacy-hero">
+        <div class="hero-content">
+            <h1>Gizlilik Politikası</h1>
+            <p>Kişisel verilerinizin korunması bizim için önemlidir</p>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <div class="container">
+        <div class="privacy-content">
+            <div class="last-updated">
+                Son güncelleme: 25 Aralık 2025
+            </div>
+
+            <div class="privacy-section">
+                <h2>1. Giriş</h2>
+                <p>
+                    Liman Balık Restaurant olarak, kişisel verilerinizin gizliliği ve güvenliği bizim için son derece önemlidir.
+                    Bu gizlilik politikası, web sitemizi kullandığınızda toplanan, kullanılan ve korunan kişisel bilgiler
+                    hakkında sizi bilgilendirmek amacıyla hazırlanmıştır.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>2. Toplanan Bilgiler</h2>
+                <h3>Rezervasyon Bilgileri</h3>
+                <p>Rezervasyon yaptığınızda aşağıdaki bilgileri toplayabiliriz:</p>
+                <ul>
+                    <li>Ad ve soyad</li>
+                    <li>E-posta adresi</li>
+                    <li>Telefon numarası</li>
+                    <li>Rezervasyon tarihi ve saati</li>
+                    <li>Kişi sayısı</li>
+                    <li>Özel istekler veya notlar</li>
+                </ul>
+
+                <h3>İletişim Bilgileri</h3>
+                <p>İletişim formunu kullandığınızda:</p>
+                <ul>
+                    <li>Ad ve soyad</li>
+                    <li>E-posta adresi</li>
+                    <li>Telefon numarası (isteğe bağlı)</li>
+                    <li>Mesaj içeriği</li>
+                </ul>
+
+                <h3>Otomatik Olarak Toplanan Bilgiler</h3>
+                <ul>
+                    <li>IP adresi</li>
+                    <li>Tarayıcı türü ve sürümü</li>
+                    <li>İşletim sistemi</li>
+                    <li>Siteye erişim zamanları</li>
+                    <li>Çerezler aracılığıyla toplanan bilgiler</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>3. Bilgilerin Kullanım Amaçları</h2>
+                <p>Topladığımız kişisel bilgileri aşağıdaki amaçlar için kullanırız:</p>
+                <ul>
+                    <li>Rezervasyon işlemlerini gerçekleştirmek</li>
+                    <li>Müşteri hizmetleri sağlamak</li>
+                    <li>İletişim ihtiyaçlarını karşılamak</li>
+                    <li>Siteyi iyileştirmek ve kullanıcı deneyimini geliştirmek</li>
+                    <li>Yasal yükümlülükleri yerine getirmek</li>
+                    <li>Pazarlama ve tanıtım faaliyetleri (izin verilen durumlar için)</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>4. Bilgilerin Paylaşımı</h2>
+                <p>
+                    Kişisel bilgileriniz üçüncü kişilerle paylaşılmaz, satılmaz veya kiralanmaz. Ancak aşağıdaki durumlar
+                    hariç olmak üzere bilgileriniz gizli tutulur:
+                </p>
+                <ul>
+                    <li>Yasal zorunluluklar durumunda</li>
+                    <li>Yetkili kurumların talebi üzerine</li>
+                    <li>Hizmet sağlayıcılarımızla (rezervasyon sistemi, e-posta servisi vb.)</li>
+                    <li>Açık rızanız olması durumunda</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>5. Veri Güvenliği</h2>
+                <p>
+                    Kişisel bilgilerinizin güvenliğini sağlamak için aşağıdaki tedbirleri alıyoruz:
+                </p>
+                <ul>
+                    <li>SSL şifreleme teknolojisi kullanımı</li>
+                    <li>Güvenli sunucu altyapısı</li>
+                    <li>Düzenli güvenlik güncellemeleri</li>
+                    <li>Çalışan eğitimleri</li>
+                    <li>Erişim kontrol mekanizmaları</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>6. Çerezler (Cookies)</h2>
+                <p>
+                    Web sitemiz, kullanıcı deneyimini iyileştirmek için çerezler kullanmaktadır. Çerezler sayesinde:
+                </p>
+                <ul>
+                    <li>Site performansını izleyebiliriz</li>
+                    <li>Kullanıcı tercihlerini hatırlayabiliriz</li>
+                    <li>Siteyi kişiselleştirebiliriz</li>
+                    <li>Analytics verilerini toplayabiliriz</li>
+                </ul>
+                <p>
+                    Çerezleri kabul etmemek isterseniz tarayıcı ayarlarınızdan çerezleri devre dışı bırakabilirsiniz.
+                    Ancak bu durumda site fonksiyonlarının bazıları çalışmayabilir.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>7. Veri Saklama Süresi</h2>
+                <p>
+                    Kişisel bilgileriniz, ilgili amaç için gerekli olduğu süre boyunca saklanır:
+                </p>
+                <ul>
+                    <li>Rezervasyon bilgileri: Rezervasyon tarihinden itibaren 2 yıl</li>
+                    <li>İletişim bilgileri: İletişimden itibaren 1 yıl</li>
+                    <li>Analitik veriler: Anonimleştirildikten sonra süresiz</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>8. Haklarınız</h2>
+                <p>KVKK ve ilgili mevzuat gereği aşağıdaki haklara sahipsiniz:</p>
+                <ul>
+                    <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                    <li>Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme</li>
+                    <li>Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+                    <li>Yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme</li>
+                    <li>Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
+                    <li>Kişisel verilerinizin silinmesini veya yok edilmesini isteme</li>
+                    <li>Düzeltilme veya silme işlemlerinin, kişisel verilerinizin aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
+                    <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi aleyhine bir sonucun ortaya çıkmasına itiraz etme</li>
+                    <li>Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🔒 Güvenliğiniz Bizim Önceliğimiz</h3>
+                <p>
+                    Kişisel bilgilerinizin güvenliği için endüstri standardı güvenlik önlemleri uyguluyoruz.
+                    Verileriniz 256-bit SSL şifreleme ile korunmaktadır.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>9. Çocukların Gizliliği</h2>
+                <p>
+                    Web sitemiz 18 yaş altı çocuklardan kişisel bilgi toplamayı amaçlamamaktadır.
+                    Eğer 18 yaş altı bir çocuğun kişisel bilgilerini verdiğini fark edersek,
+                    bu bilgileri derhal sistemlerimizden kaldırırız.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>10. Değişiklikler</h2>
+                <p>
+                    Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler durumunda
+                    web sitemizde duyuru yaparız. Politikadaki değişiklikler yayınlandığı tarihten
+                    itibaren geçerli olur.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>11. İletişim</h2>
+                <p>
+                    Gizlilik politikamız hakkında sorularınız için aşağıdaki iletişim bilgilerinden
+                    bize ulaşabilirsiniz:
+                </p>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h2>Bize Ulaşın</h2>
+                <p>Gizlilik politikamız hakkında herhangi bir sorunuz olursa lütfen iletişime geçin.</p>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <h4>E-posta</h4>
+                        <p>privacy@limanbalik.com</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <h4>Telefon</h4>
+                        <p>0378 XXX XX XX</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Adres</h4>
+                        <p>Sahil Yolu No:12, Amasra/Bartın</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        İletişim Formu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-fish"></i>
+                        <span>Liman Balık</span>
+                    </div>
+                    <p>Karadeniz'in en taze lezzetleri ile sizleri ağırlamaktan mutluluk duyarız.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="menu.html">Menü</a></li>
+                        <li><a href="reservation.html">Rezervasyon</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 0378 XXX XX XX</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sahil Yolu No:12, Amasra</p>
+                        <p><i class="fas fa-clock"></i> 11:00 - 23:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Liman Balık Restaurant. Tüm hakları saklıdır.</p>
+                <p>Demo Site - Mert Cihan Bayır</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Add fade-in animation for sections
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('.privacy-section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Liman Balık Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Fallback CSS */
+        body { font-family: 'Roboto', Arial, sans-serif; margin: 0; padding: 70px 0 0 0; background: #f8fafc; color: #1e293b; }
+        .navbar { background: #1e3a8a; color: white; padding: 1rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 1.5rem; font-weight: 700; }
+        .nav-menu { display: flex; gap: 30px; }
+        .nav-link { color: white; text-decoration: none; font-weight: 500; transition: all 0.3s; }
+        .nav-link:hover { color: #06b6d4; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        /* Hero styles now in main CSS file */
+        .hero-title { font-size: 3rem; margin-bottom: 1rem; }
+        .contact-section { padding: 60px 0; }
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 3rem; }
+        .contact-form-container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .contact-form { display: flex; flex-direction: column; gap: 20px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .btn { display: inline-block; padding: 12px 24px; background: #1e3a8a; color: white; text-decoration: none; border-radius: 8px; transition: all 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background: #1e40af; }
+        .contact-info-panel { display: flex; flex-direction: column; gap: 30px; }
+        .contact-info-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .contact-info-card h3 { color: #1e3a8a; margin-bottom: 20px; }
+        .map-section { padding: 60px 0; background: #f8fafc; }
+        .faq-section { padding: 60px 0; }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 3rem; }
+        .faq-item { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .footer { background: #1e293b; color: white; padding: 40px 0 20px; text-align: center; margin-top: 60px; }
+    </style>
+</head>
+<body style="padding-top: 70px;">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-fish"></i>
+                <span>Liman Balık</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="menu.html" class="nav-link">Menü</a>
+                <a href="reservation.html" class="nav-link">Rezervasyon</a>
+                <a href="gallery.html" class="nav-link">Galeri</a>
+                <a href="about.html" class="nav-link">Hakkımızda</a>
+                <a href="contact.html" class="nav-link active">İletişim</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <i class="fas fa-envelope"></i>
+                Bize Ulaşın
+            </h1>
+            <p class="hero-subtitle">Sorularınız ve önerileriniz için her zaman yanınızdayız</p>
+            <p class="hero-description">
+                Restoranımız hakkında bilgi almak, rezervasyon yaptırmak veya geri bildirimde bulunmak için bize ulaşabilirsiniz.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contactForm" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    İletişim Formu
+                </a>
+                <a href="tel:0378XXXXXXX" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    Hemen Ara
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h2>İletişim Formu</h2>
+                        <p>Bize mesajınızı bırakın, en kısa sürede size geri dönüş yapalım.</p>
+                    </div>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">
+                                    <i class="fas fa-user"></i>
+                                    Ad Soyad *
+                                </label>
+                                <input type="text" id="contactName" name="name" required
+                                       placeholder="Adınızı ve soyadınızı girin">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail">
+                                    <i class="fas fa-envelope"></i>
+                                    E-posta *
+                                </label>
+                                <input type="email" id="contactEmail" name="email" required
+                                       placeholder="ornek@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactPhone">
+                                    <i class="fas fa-phone"></i>
+                                    Telefon
+                                </label>
+                                <input type="tel" id="contactPhone" name="phone"
+                                       placeholder="05XX XXX XX XX">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactSubject">
+                                    <i class="fas fa-tag"></i>
+                                    Konu *
+                                </label>
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="">Konu seçin</option>
+                                    <option value="reservation">Rezervasyon</option>
+                                    <option value="complaint">Şikayet</option>
+                                    <option value="suggestion">Öneri</option>
+                                    <option value="information">Bilgi Talebi</option>
+                                    <option value="partnership">İş Birliği</option>
+                                    <option value="other">Diğer</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">
+                                <i class="fas fa-comment"></i>
+                                Mesajınız *
+                            </label>
+                            <textarea id="contactMessage" name="message" required
+                                      placeholder="Mesajınızı yazın..." rows="6"></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Gönder
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-panel">
+                    <div class="contact-info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Adres</h3>
+                        <p>Sahil Yolu No:12</p>
+                        <p>Amasra/Bartın</p>
+                        <a href="#" class="btn btn-secondary btn-sm">
+                            <i class="fas fa-directions"></i>
+                            Yol Tarifi
+                        </a>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3><i class="fas fa-phone"></i> Telefon</h3>
+                        <div class="phone-numbers">
+                            <a href="tel:0378XXXXXXX" class="phone-link">
+                                <i class="fas fa-phone"></i>
+                                0378 XXX XX XX
+                            </a>
+                            <a href="tel:0532XXXXXXX" class="phone-link">
+                                <i class="fas fa-mobile-alt"></i>
+                                0532 XXX XX XX
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
+                        <a href="https://wa.me/90532XXXXXXX" class="whatsapp-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            0532 XXX XX XX
+                        </a>
+                        <p class="whatsapp-note">Hızlı iletişim için WhatsApp'ı kullanabilirsiniz.</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3><i class="fas fa-clock"></i> Çalışma Saatleri</h3>
+                        <div class="hours-list">
+                            <div class="hour-item">
+                                <span class="day">Pazartesi - Cuma</span>
+                                <span class="time">11:00 - 23:00</span>
+                            </div>
+                            <div class="hour-item">
+                                <span class="day">Cumartesi</span>
+                                <span class="time">11:00 - 24:00</span>
+                            </div>
+                            <div class="hour-item">
+                                <span class="day">Pazar</span>
+                                <span class="time">11:00 - 22:00</span>
+                            </div>
+                        </div>
+                        <p class="hours-note">Resmi tatiller hariç her gün açık.</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3><i class="fas fa-envelope"></i> E-posta</h3>
+                        <a href="mailto:info@limanbalik.com" class="email-link">
+                            <i class="fas fa-envelope"></i>
+                            info@limanbalik.com
+                        </a>
+                        <p class="email-note">Genel sorularınız için kullanabilirsiniz.</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3><i class="fas fa-share-alt"></i> Sosyal Medya</h3>
+                        <div class="social-links-large">
+                            <a href="#" class="social-link-large">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link-large">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link-large">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Bizi Bulun</h2>
+                <p>Amasra'da sahil yolunda konumlanıyoruz</p>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Liman Balık Restaurant</h3>
+                    <p>Sahil Yolu No:12, Amasra/Bartın</p>
+                    <div class="map-features">
+                        <div class="map-feature">
+                            <i class="fas fa-car"></i>
+                            <span>Otopark Var</span>
+                        </div>
+                        <div class="map-feature">
+                            <i class="fas fa-water"></i>
+                            <span>Deniz Kenarı</span>
+                        </div>
+                        <div class="map-feature">
+                            <i class="fas fa-utensils"></i>
+                            <span>Terasa Sahip</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary map-btn">
+                        <i class="fas fa-directions"></i>
+                        Google Maps'te Aç
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sık Sorulan Sorular</h2>
+                <p>Müşterilerimizin en çok sorduğu sorular</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Rezervasyon için önceden aramak gerekiyor mu?</h4>
+                    <p>Hayır, web sitemiz üzerinden online rezervasyon yapabilirsiniz. Ayrıca telefon veya WhatsApp ile de rezervasyon taleplerinizi iletebilirsiniz.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Grup rezervasyonları için ne yapmalıyım?</h4>
+                    <p>10 kişiden fazla gruplar için önceden bizimle iletişime geçmenizi öneririz. Özel menü ve düzenlemeler için yardımcı olabiliriz.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Vegan/vejetaryen seçenekleriniz var mı?</h4>
+                    <p>Evet, menümüzde çeşitli vegan ve vejetaryen seçenekleri mevcuttur. Personelimize tercihlerinizi belirtmeniz yeterli olacaktır.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Çocuklar için özel düzenlemeleriniz var mı?</h4>
+                    <p>Evet, çocuklarınız için özel menü seçenekleri ve yüksek sandalyelerimiz bulunmaktadır.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Otopark imkanınız var mı?</h4>
+                    <p>Evet, restoranımızın önünde ücretsiz otopark alanı mevcuttur.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Ödeme seçenekleri nelerdir?</h4>
+                    <p>Nakit, kredi kartı ve tüm dijital ödeme yöntemlerini kabul ediyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-fish"></i>
+                        <span>Liman Balık</span>
+                    </div>
+                    <p>Karadeniz'in en taze lezzetleri ile sizleri ağırlamaktan mutluluk duyarız.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="menu.html">Menü</a></li>
+                        <li><a href="reservation.html">Rezervasyon</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 0378 XXX XX XX</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sahil Yolu No:12, Amasra</p>
+                        <p><i class="fas fa-clock"></i> 11:00 - 23:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Liman Balık Restaurant. Tüm hakları saklıdır.</p>
+                <p>Demo Site - Mert Cihan Bayır</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

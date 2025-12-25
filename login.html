@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş - Liman Balık Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .login-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 20px;
+        }
+
+        .login-container {
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .login-image {
+            flex: 1;
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(6, 182, 212, 0.8)),
+                        url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .login-image h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .login-image p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .login-features {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-item i {
+            font-size: 1.5rem;
+            color: var(--gold-color);
+        }
+
+        .login-form {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .login-header p {
+            color: #6b7280;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .forgot-password {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 1rem;
+        }
+
+        .login-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .login-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 1.5rem 0;
+            position: relative;
+            color: #6b7280;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e5e7eb;
+        }
+
+        .divider span {
+            background: white;
+            padding: 0 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-login {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--text-dark);
+        }
+
+        .social-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .back-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        .alert {
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .alert-error {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+        .alert-success {
+            background: #f0fdf4;
+            color: #16a34a;
+            border: 1px solid #bbf7d0;
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column;
+                max-width: 400px;
+            }
+
+            .login-image {
+                padding: 30px 20px;
+            }
+
+            .login-image h2 {
+                font-size: 2rem;
+            }
+
+            .login-form {
+                padding: 30px 20px;
+            }
+
+            .feature-item {
+                padding: 12px;
+            }
+
+            .social-login {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-container">
+            <!-- Left Side - Image & Info -->
+            <div class="login-image">
+                <h2>Liman Balık</h2>
+                <p>Admin Paneline Hoş Geldiniz</p>
+
+                <div class="login-features">
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <strong>Dashboard</strong><br>
+                            <small>Güncel istatistikler</small>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <div>
+                            <strong>Rezervasyon Yönetimi</strong><br>
+                            <small>Onaylama ve düzenleme</small>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-utensils"></i>
+                        <div>
+                            <strong>Menü Yönetimi</strong><br>
+                            <small>Ürün ekleme ve düzenleme</small>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <strong>Yorum Yönetimi</strong><br>
+                            <small>Müşteri geri bildirimleri</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Login Form -->
+            <div class="login-form">
+                <div class="login-header">
+                    <h1>Giriş Yap</h1>
+                    <p>Admin paneline erişmek için giriş yapın</p>
+                </div>
+
+                <!-- Alert Messages -->
+                <div id="alertMessage" class="alert" style="display: none;"></div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Kullanıcı Adı</label>
+                        <input type="text" id="username" name="username" required
+                               placeholder="Kullanıcı adınızı girin">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Şifre</label>
+                        <input type="password" id="password" name="password" required
+                               placeholder="Şifrenizi girin">
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-group">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Beni hatırla</span>
+                        </label>
+                        <a href="#" class="forgot-password">Şifremi unuttum</a>
+                    </div>
+
+                    <button type="submit" class="login-btn" id="loginBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Giriş Yap
+                    </button>
+                </form>
+
+                <div class="divider">
+                    <span>veya</span>
+                </div>
+
+                <div class="social-login">
+                    <a href="#" class="social-btn" id="googleLogin">
+                        <i class="fab fa-google"></i>
+                        Google ile Giriş
+                    </a>
+                    <a href="#" class="social-btn" id="facebookLogin">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook ile Giriş
+                    </a>
+                </div>
+
+                <div class="back-link">
+                    <a href="index.html">
+                        <i class="fas fa-arrow-left"></i>
+                        Ana Sayfaya Dön
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const loginBtn = document.getElementById('loginBtn');
+            const alertMessage = document.getElementById('alertMessage');
+
+            // Demo credentials
+            const demoCredentials = {
+                username: 'admin',
+                password: 'limanbalik2025'
+            };
+
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                const rememberMe = document.getElementById('rememberMe').checked;
+
+                // Show loading state
+                loginBtn.disabled = true;
+                loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Giriş yapılıyor...';
+
+                // Simulate API call
+                setTimeout(() => {
+                    if (username === demoCredentials.username && password === demoCredentials.password) {
+                        // Success
+                        showAlert('Giriş başarılı! Yönlendiriliyorsunuz...', 'success');
+
+                        // Store login state (demo)
+                        if (rememberMe) {
+                            localStorage.setItem('adminLoggedIn', 'true');
+                            localStorage.setItem('adminLoginTime', new Date().toISOString());
+                        } else {
+                            sessionStorage.setItem('adminLoggedIn', 'true');
+                        }
+
+                        // Redirect to admin panel
+                        setTimeout(() => {
+                            window.location.href = 'admin.html';
+                        }, 1500);
+
+                    } else {
+                        // Error
+                        showAlert('Kullanıcı adı veya şifre hatalı!', 'error');
+                        loginBtn.disabled = false;
+                        loginBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Giriş Yap';
+                    }
+                }, 2000);
+            });
+
+            // Social login handlers (demo)
+            document.getElementById('googleLogin').addEventListener('click', function(e) {
+                e.preventDefault();
+                showAlert('Google giriş özelliği yakında eklenecek!', 'error');
+            });
+
+            document.getElementById('facebookLogin').addEventListener('click', function(e) {
+                e.preventDefault();
+                showAlert('Facebook giriş özelliği yakında eklenecek!', 'error');
+            });
+
+            // Forgot password
+            document.querySelector('.forgot-password').addEventListener('click', function(e) {
+                e.preventDefault();
+                showAlert('Şifre sıfırlama özelliği yakında eklenecek!', 'error');
+            });
+
+            // Check if already logged in
+            if (localStorage.getItem('adminLoggedIn') === 'true' ||
+                sessionStorage.getItem('adminLoggedIn') === 'true') {
+                showAlert('Zaten giriş yapmışsınız. Yönlendiriliyorsunuz...', 'success');
+                setTimeout(() => {
+                    window.location.href = 'admin.html';
+                }, 1500);
+            }
+        });
+
+        function showAlert(message, type) {
+            const alertMessage = document.getElementById('alertMessage');
+            alertMessage.textContent = message;
+            alertMessage.className = `alert alert-${type}`;
+            alertMessage.style.display = 'block';
+
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                alertMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        // Add some visual enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add focus effects
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+
+                input.addEventListener('blur', function() {
+                    this.parentElement.classList.remove('focused');
+                });
+            });
+
+            // Add enter key support
+            document.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && document.activeElement.tagName !== 'BUTTON') {
+                    document.getElementById('loginBtn').click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

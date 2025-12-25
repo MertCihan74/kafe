@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teşekkürler - Liman Balık Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .thank-you-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .thank-you-content {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            color: var(--gold-color);
+            margin-bottom: 2rem;
+            animation: checkmark 0.8s ease-in-out;
+        }
+
+        @keyframes checkmark {
+            0% {
+                transform: scale(0) rotate(-180deg);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2) rotate(-90deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        .thank-you-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .thank-you-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .reservation-details {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .detail-value {
+            font-weight: 600;
+            color: var(--gold-color);
+        }
+
+        .reservation-id {
+            background: var(--gold-color);
+            color: var(--primary-dark);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        .next-steps {
+            margin: 2rem 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            font-weight: bold;
+        }
+
+        .thank-you-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .countdown {
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .countdown-number {
+            color: var(--gold-color);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-content {
+                padding: 40px 20px;
+            }
+
+            .thank-you-title {
+                font-size: 2rem;
+            }
+
+            .thank-you-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .reservation-details {
+                padding: 20px;
+            }
+
+            .detail-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-fish"></i>
+                <span>Liman Balık</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="menu.html" class="nav-link">Menü</a>
+                <a href="reservation.html" class="nav-link">Rezervasyon</a>
+                <a href="gallery.html" class="nav-link">Galeri</a>
+                <a href="about.html" class="nav-link">Hakkımızda</a>
+                <a href="contact.html" class="nav-link">İletişim</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="thank-you-page">
+        <div class="thank-you-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+
+            <h1 class="thank-you-title">Rezervasyonunuz Onaylandı!</h1>
+            <p class="thank-you-subtitle">Karadeniz'in en taze lezzetleri için sizi bekliyoruz</p>
+
+            <div class="reservation-details">
+                <div class="reservation-id">Rezervasyon #RSV-2025-001</div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Tarih:</span>
+                    <span class="detail-value" id="resDate">-</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Saat:</span>
+                    <span class="detail-value" id="resTime">-</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Kişi Sayısı:</span>
+                    <span class="detail-value" id="resPartySize">-</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Ad Soyad:</span>
+                    <span class="detail-value" id="resName">-</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Telefon:</span>
+                    <span class="detail-value" id="resPhone">-</span>
+                </div>
+                <div class="detail-row" id="specialRequestsRow" style="display: none;">
+                    <span class="detail-label">Özel İstekler:</span>
+                    <span class="detail-value" id="resRequests">-</span>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>📋 Sonraki Adımlar</h3>
+
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <div>
+                        <strong>SMS Onayı</strong><br>
+                        <small>Rezervasyon bilgileriniz telefonunuza SMS ile gönderilecek</small>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <div>
+                        <strong>E-posta Bildirimi</strong><br>
+                        <small>Detaylı rezervasyon bilgileri e-posta adresinize iletilecek</small>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <div>
+                        <strong>Restorana Gelin</strong><br>
+                        <small>Rezervasyon saatinizde sizi ağırlamaktan mutluluk duyarız</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="countdown">
+                <p>Bu sayfadan otomatik çıkış: <span class="countdown-number" id="countdown">10</span> saniye</p>
+            </div>
+
+            <div class="thank-you-actions">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i>
+                    Ana Sayfa
+                </a>
+                <a href="menu.html" class="btn btn-secondary">
+                    <i class="fas fa-utensils"></i>
+                    Menü İncele
+                </a>
+                <a href="gallery.html" class="btn btn-secondary">
+                    <i class="fas fa-images"></i>
+                    Galeriyi Gör
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    İletişim
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get reservation data from URL parameters or localStorage
+            loadReservationData();
+
+            // Countdown timer
+            startCountdown();
+
+            // Add some celebratory animations
+            addCelebrationEffects();
+        });
+
+        function loadReservationData() {
+            // Try to get data from URL parameters (fallback)
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // For demo purposes, we'll use some default values
+            // In a real implementation, this would come from the server or localStorage
+            const demoData = {
+                date: '25.12.2025',
+                time: '19:00',
+                partySize: '4 kişi',
+                name: 'Ahmet Yılmaz',
+                phone: '0532 XXX XX XX',
+                requests: null
+            };
+
+            // You can extend this to read from localStorage or URL params
+            // const reservationData = JSON.parse(localStorage.getItem('lastReservation')) || demoData;
+
+            // Update the page with data
+            document.getElementById('resDate').textContent = demoData.date;
+            document.getElementById('resTime').textContent = demoData.time;
+            document.getElementById('resPartySize').textContent = demoData.partySize;
+            document.getElementById('resName').textContent = demoData.name;
+            document.getElementById('resPhone').textContent = demoData.phone;
+
+            if (demoData.requests) {
+                document.getElementById('resRequests').textContent = demoData.requests;
+                document.getElementById('specialRequestsRow').style.display = 'flex';
+            }
+        }
+
+        function startCountdown() {
+            let timeLeft = 10;
+            const countdownElement = document.getElementById('countdown');
+
+            const countdownInterval = setInterval(() => {
+                timeLeft--;
+                countdownElement.textContent = timeLeft;
+
+                if (timeLeft <= 3) {
+                    countdownElement.style.color = '#ef4444';
+                    countdownElement.style.animation = 'pulse 1s infinite';
+                }
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    // Auto redirect to home page
+                    window.location.href = 'index.html';
+                }
+            }, 1000);
+        }
+
+        function addCelebrationEffects() {
+            // Add confetti effect (simple version)
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes pulse {
+                    0%, 100% { transform: scale(1); }
+                    50% { transform: scale(1.1); }
+                }
+
+                @keyframes float {
+                    0%, 100% { transform: translateY(0px); }
+                    50% { transform: translateY(-10px); }
+                }
+
+                .celebrate {
+                    animation: float 3s ease-in-out infinite;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Add floating animation to success icon
+            const successIcon = document.querySelector('.success-icon');
+            successIcon.classList.add('celebrate');
+
+            // Add subtle animations to steps
+            const steps = document.querySelectorAll('.step');
+            steps.forEach((step, index) => {
+                step.style.opacity = '0';
+                step.style.transform = 'translateX(-20px)';
+
+                setTimeout(() => {
+                    step.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    step.style.opacity = '1';
+                    step.style.transform = 'translateX(0)';
+                }, index * 200);
+            });
+        }
+
+        // Add click tracking for action buttons
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.btn')) {
+                const button = e.target.closest('.btn');
+                const buttonText = button.textContent.trim();
+
+                // You could send analytics data here
+                console.log('Button clicked:', buttonText);
+            }
+        });
+    </script>
+</body>
+</html>
